@@ -1,0 +1,239 @@
+.experience {
+  background-color: #151515;
+  position: relative;
+  padding: 45px 0 15px 0;
+}
+
+.experience .timeline {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.experience .timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #EF233C;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.experience .timeline .timeline-item {
+  position: relative;
+  background: inherit;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.experience .timeline .timeline-item.left {
+  left: 0;
+  padding-right: 30px;
+}
+
+.experience .timeline .timeline-item.right {
+  left: 50%;
+  padding-left: 30px;
+}
+
+.experience .timeline .timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 48px;
+  right: -8px;
+  background: #ffffff;
+  border: 2px solid #EF233C;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.experience .timeline .timeline-item.right::after {
+  left: -8px;
+}
+
+.experience .timeline .timeline-item::before {
+content: '';
+position: absolute;
+width: 0;
+height: 0;
+top: 46px;
+right: 10px;
+z-index: 0;
+border: 10px solid;
+border-color: transparent transparent transparent #dddddd;
+}
+
+.experience .timeline .timeline-item.right::before {
+left: 10px;
+border-color: transparent #dddddd transparent transparent;
+}
+
+.experience .timeline .timeline-date {
+  position: absolute;
+  width: 100%;
+  top: 44px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #EF233C;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.experience .timeline .timeline-item.left .timeline-date {
+  text-align: left;
+  left: calc(100% + 55px);
+}
+
+.experience .timeline .timeline-item.right .timeline-date {
+  text-align: right;
+  right: calc(100% + 55px);
+}
+
+.experience .timeline .timeline-text {
+  padding: 30px;
+  background: #ffffff;
+  position: relative;
+  border-right: 5px solid #dddddd;
+  box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+}
+
+.experience .timeline .timeline-item.right .timeline-text {
+  border-right: none;
+  border-left: 5px solid #dddddd;
+}
+
+.experience .timeline .timeline-text h2 {
+  margin: 0 0 5px 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.experience .timeline .timeline-text h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.experience .timeline .timeline-text p {
+  margin: 0;
+  font-size: 16px;
+}
+
+@media (max-width: 767.98px) {
+  .experience .timeline::after {
+      left: 8px;
+  }
+
+  .experience .timeline .timeline-item {
+      width: 100%;
+      padding-left: 38px;
+  }
+  
+  .experience .timeline .timeline-item.left {
+      padding-right: 0;
+  }
+  
+  .experience .timeline .timeline-item.right {
+      left: 0%;
+      padding-left: 38px;
+  }
+
+  .experience .timeline .timeline-item.left::after, 
+  .experience .timeline .timeline-item.right::after {
+      left: 0;
+  }
+  
+  .experience .timeline .timeline-item.left::before,
+  .experience .timeline .timeline-item.right::before {
+      left: 18px;
+      border-color: transparent #dddddd transparent transparent;
+  }
+  
+  .experience .timeline .timeline-item.left .timeline-date,
+  .experience .timeline .timeline-item.right .timeline-date {
+      position: relative;
+      top: 0;
+      right: auto;
+      left: 0;
+      text-align: left;
+      margin-bottom: 10px;
+  }
+  
+  .experience .timeline .timeline-item.left .timeline-text,
+  .experience .timeline .timeline-item.right .timeline-text {
+      border-right: none;
+      border-left: 5px solid #dddddd;
+  }
+}
+.conta{
+  background-color: #f1f1f1;
+}
+
+.section-header {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.section-header p {
+  display: inline-block;
+  margin: 0 30px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /* background: #ffffff; */
+  color: #fff;
+}
+
+.section-header p::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  top: 11px;
+  right: 0;
+  left: -30px;
+  background: #EF233C;
+  z-index: -1;
+}
+
+.section-header p::after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 3px;
+  top: 11px;
+  left: 3px;
+  background: #EF233C;
+  z-index: 1;
+}
+
+.section-header h2 {
+  margin: 0;
+  position: relative;
+  font-size: 45px;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  .section-header h2 {
+      font-size: 30px;
+  }
+}
+.container{
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}

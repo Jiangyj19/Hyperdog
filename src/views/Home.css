@@ -1,7 +1,16 @@
 body{
-  background: linear-gradient(180deg,#382653 0,#6681c5);
+  /* background: linear-gradient(180deg,#382653,#6681c5); */
+  background-color: #151515 !important;
   overflow-x: hidden;
-  
+}
+.aic{
+  display: flex;
+  align-items: center;
+}
+.jcsb{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .header{
   position: fixed;
@@ -16,7 +25,8 @@ body{
   font-size: 0.875rem;
   font-weight: 400;
   width: 100%;
-  background-color: rgba(85,71,173,0.6);
+  /* background-color: rgba(85,71,173,0.6); */
+  background-color: #2e2e2e;
   border-radius: 0;
   line-height: 64px;
 }
@@ -35,12 +45,19 @@ body{
   box-sizing: border-box;
 }
 .headerImg{
-  margin-left: 30px;
-  height: 24px;
+
+  font-family: Chalkboard,sans-serif;
+  margin-left: 70px;
+  height: 36px;
+  /* width: 100px; */
+  color: #fff;
+  line-height: 36px;
+  font-size: 32px;
+  cursor:pointer;
 }
 .headerTitle :nth-child(1){
   margin-left: 0;
-  height: 36px;
+  /* height: 36px; */
 }
 .headerDocs{
   /* margin-left: 36px; */
@@ -70,6 +87,7 @@ body{
   height: 36px;
   text-align: center;
   line-height: 43px;
+  margin-left: 32px;
 }
 .icon:hover{
   width: 36px;
@@ -91,6 +109,7 @@ body{
   color: rgba(0, 0, 0, 0.87);
   border-radius: 8px;
   border: 1px solid #000000;
+  margin: 0 50px;
 }
 .headerIcon{
   display: flex;
@@ -98,9 +117,16 @@ body{
   margin: 0 8px;
 }
 .contentText{
+  position: fixed;
+  background-color: #fff;
+  border-radius: 8px;
+  /* left: -10px; */
+  top: 64px;
   color: #3A2856;
   font-size: 14px;
   font-family: Inter, sans-serif;
+  padding: 10px 16px;
+  cursor:pointer;
 }
 .connectImg{
   height: 40px;
@@ -131,11 +157,12 @@ body{
   width: 100vw;
   background-color: rgba(0,0,0,.1);
   z-index: 1;
+  overflow: hidden;
   /* opacity: 0; */
 }
 .conenctShow{
-  position: absolute;
-  top: 18%;
+  position: fixed;
+  top: 20%;
   left: calc(50% - 160px);
   height: 180px;
   width: 320px;
@@ -150,7 +177,8 @@ body{
   display: flex;
   align-items: center;
   width: 1200px;
-  margin: 64px auto 0;
+  margin: 0 auto ;
+  height: 100vh;
 }
 .introduction{
   font-weight: 400;
@@ -178,6 +206,8 @@ body{
   justify-content: center;
   flex-direction: column;
   min-width: 1200px;
+  /* height: 100vh; */
+  box-sizing: border-box;
 }
 .footerFir{
   margin: 0;
@@ -189,8 +219,9 @@ body{
   text-transform: uppercase;
   opacity: 0.75;
   line-height: 1.57;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  /* margin-top: 8px; */
+  margin-bottom: 32px;
+  padding-top: 100px;
 }
 .footerSec{
   margin: 0;
@@ -200,7 +231,7 @@ body{
   color: #FFFFFF;
   text-shadow: 0px 2px #2e2731;
   line-height: 1.2;
-  margin-bottom: 16px;
+  margin-bottom: 56px;
 }
 .footerThi{
   width: 1200px;
@@ -215,6 +246,7 @@ body{
   align-items: center;
   justify-content: center;
   padding: 0 32px;
+  width: 25%;
 }
 .footerBox img{
   height: 168px;
@@ -223,7 +255,8 @@ body{
   background-color: rgba(0,0,0,.4);
 }
 .footerContent{
-  margin: 0;
+  width: 100%;
+  height: 200px;
   font-weight: 400;
   font-family: Inter,sans-serif;
   color: rgba(255,255,255,1);
@@ -231,6 +264,8 @@ body{
   line-height: 1.5;
   margin-bottom: 0.35em;
   text-align: center;
+  word-wrap: break-word;
+  word-break: normal;
 }
 .footerUrl{
   margin: 0;
@@ -251,16 +286,148 @@ body{
   text-transform: uppercase;
   opacity: 0.75;
   line-height: 1.57;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin: 16px 0;
   opacity: 1;
 }
-footer{
+.footerLast{
   margin: 0 auto;
   width: 1200px;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 100px;
+  color: #fff;
 }
 /* 
-  六边形
+  菜单显示
 */
+.menuShow{
+  position: fixed;
+  top: 16%;
+  left: calc(50% - 250px);
+  width: 500px;
+  background-color: #fff;
+  padding: 24px 24px 22px;
+  border-radius: 24px;
+
+}
+.menuShowIcon{
+  height: 21px;
+  /* width: 21px; */
+}
+.menuShowTitle{
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+.out{
+  position: absolute;
+  top: -30px;
+  left: 1%;
+  width: 99%;
+  height: 21px;
+}
+.close{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 10000;
+  background: white;
+  border-radius: 26px;
+  padding: 6px;
+  box-sizing: border-box;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+.closeIcon{
+  position: relative;
+  top: 7px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
+}
+.closeLine1{
+  position: absolute;
+  width: 100%;
+  border: 1px solid rgb(48, 52, 59);
+}
+.closeLine2{
+  position: absolute;
+  width: 100%;
+  border: 1px solid rgb(48, 52, 59);
+  transform: rotate(90deg);
+}
+
+/* deep */
+.ant-tabs-large > .ant-tabs-nav .ant-tabs-tab {
+  padding: 8px 24px !important;
+}
+.ant-popover-placement-bottom{
+  position: fixed !important; 
+}
+
+.walletQrcode{
+  color: rgba(60, 66, 82, 0.6);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.1875em;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+.input{
+  border: none;
+  background: #d4d5d9;
+  border-style: none;
+  padding: 8px 16px;
+  outline: none;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  border-radius: 8px;
+  width: calc(100% - 16px);
+  margin: 0;
+  margin-bottom: 8px;
+}
+.walletTable{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.walletTableList{
+  /* flex: 0.25; */
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 50px;
+  width: 25%;
+  justify-self: center;
+  flex-direction: column;
+  text-decoration: none !important;
+}
+.walletTableImg{
+  border-radius: 10px;
+    height: 42px;
+    margin: 0;
+    width: 42px;
+    background-size: cover !important;
+    box-shadow: 0 4px 12px 0 rgb(37 41 46 / 25%);
+}
+.walletTableList div{
+  color: #424952;
+  font-size: 16;
+  text-decoration: none !important;
+  padding: 0;
+  margin-top: 10px;
+  font-weight: 600;
+}
