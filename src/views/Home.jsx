@@ -290,7 +290,7 @@ const Home = defineComponent(()=>{
 
   
   
-  const  ConnectWallet = async() => {
+  const  mint = async() => {
       if (window.ethereum) {
         window.web3 = new Web3(window.ethereum)
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
@@ -309,6 +309,20 @@ const Home = defineComponent(()=>{
       console.log(nftContract);
       const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
       await nftContract.methods.mint(accounts[0],1).send({from:accounts[0],value:100000000000000})
+  }
+  const  ConnectWallet = async() => {
+    // document.getElementById("#address").innerHTML = '1'
+      if (window.ethereum) {
+        window.web3 = new Web3(window.ethereum)
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
+        // document.getElementById("#address").innerHTML = '1'
+      }
+      else if (window.web3) {
+        window.web3 = window.web3.currentProvider
+      }
+      else {
+        window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
+      }
   }
 
   const render = () => {
@@ -342,10 +356,10 @@ const Home = defineComponent(()=>{
                   <TwitterOutlined  style={{color:'#fff',fontSize:'24px'}}/>
                 </div>
               </div>
-              <div className="headerConnect" onClick={()=>ConnectWallet()}>
+              <div className="headerConnect" onClick={()=>mint()}>
                 mint
               </div>
-              <div className="headerConnect" onClick={showModal}>
+              <div className="headerConnect" onClick={ConnectWallet} id="address">
                 Connect a Wallet
               </div>
             
